@@ -15,8 +15,8 @@ return `
 </div>
 <div class="main-nav">
     <div class="logo">
-        <a href="index.html"> <img id="logo-img" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt=""
-                srcset=""></a>
+        <a href="index.html"> <img id="logo-img" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+                alt="" srcset=""></a>
     </div>
     <div class="categories">
         <a href="#">Categories</a>
@@ -27,8 +27,10 @@ return `
         </div>
     </div>
     <div class="search">
-        <img class="icon" src="assets/search.png" alt="">
-        <input type="text" placeholder="search">
+        <div> <img class="icon" src="assets/search.png" alt="">
+            <input id="search" type="text" placeholder="search">
+        </div>
+        <div class="autocomplete"></div>
     </div>
     <div class="udemy-bus">
         <a href="#">Udemy Business</a>

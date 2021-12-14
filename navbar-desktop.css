@@ -144,3 +144,25 @@ input:focus{
 section{
     height: 200vh;
 }
+/* /////////////// */
+.search{
+    position: relative;
+}
+.search>:nth-child(1){
+    display:flex;
+    width: 100%;
+}
+.autocomplete{
+    width: 90%;
+    border:1px solid rgb(168, 168, 168);
+    position:absolute;
+    top: 105%;
+}
+.suggestions{
+    cursor: pointer;
+    padding:10px;
+    border:1px solid red;
+}
+.res-icon{
+    width: 10px;
+}
