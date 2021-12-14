@@ -6,8 +6,14 @@
     list-style: none;
 }
 :root{
-    --primary-color:#000;
+    --primary-color:#1c1d1f;
     --secondary-color:#808080;
     --background-color:#fff;
-    --font-size:1em;
+    --font-size:1.4rem;
+    --font-large: 3.2rem;
+}
+
+h1{
+    font-size: var(--font-large);
+    color: var(--secondary-color);
 }
