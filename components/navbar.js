@@ -19,9 +19,9 @@ return `
                 alt="" srcset=""></a>
     </div>
     <div class="categories">
-        <a href="#">Categories</a>
-        <div class="cat-menu">
-            <div class="main-cat"></div>
+        <a href="#" id="categories">Categories</a>
+        <div class="cat-menu ">
+            <div class="first-cat"></div>
             <div class="second-cat"></div>
             <div class="third-cat"></div>
         </div>
@@ -30,7 +30,9 @@ return `
         <div> <img class="icon" src="assets/search.png" alt="">
             <input id="search" type="text" placeholder="search">
         </div>
-        <div class="autocomplete"></div>
+        <div class="search-res">
+            <div class="autocomplete"></div>
+        </div>
     </div>
     <div class="udemy-bus">
         <a href="#">Udemy Business</a>
