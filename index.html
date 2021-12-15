@@ -10,8 +10,9 @@
     <link rel="icon" type="image/png" sizes="16x16"
         href="https://www.udemy.com/staticx/udemy/images/v8/favicon-16x16.png" />
     <meta name="title" content="Online Courses - Learn Anything, On Your Schedule | Udemy">
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style/global.css">
     <link id="media-style" rel="stylesheet">
+
     <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
 </head>
 
@@ -20,15 +21,16 @@
 
     </nav>
     <section></section>
+
 </body>
 
 </html>
+
 <script type="module">
     import navbar from "./components/navbar.js"
     import navMobile from "./components/navbar-mobile.js"
     // media queries
     let nav = navbar()
-
     function myFunction(x) {
         if (x.matches) { // If media query matches
             document.getElementById("media-style").href = "navbar-mobile.css"
@@ -43,6 +45,7 @@
     var x = window.matchMedia("(max-width: 1200px)")
     myFunction(x)
     x.addListener(myFunction)
+
     import timer from "./scripts/timer.js"
 
 
@@ -50,7 +53,9 @@
     //////////////////////////////////////////////timer
 
 
-
+    document.querySelector(".remove-sale").addEventListener("click", () => {
+        document.querySelector(".sale-nav").style.display = "none"
+    })
 
 
     ////////
@@ -67,14 +72,15 @@
         } else {
             document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
             document.querySelector("body").classList.remove("dark-theme")
+
         }
     }
     /////////////
-    document.querySelector(".remove-sale").addEventListener("click", () => {
-        document.querySelector(".sale-nav").style.display = "none"
-    })
+    
 
-    ////////
+////////
 
 </script>
-<script type="module" src="scripts/search.js"></script>
+<script src=""></script>
+<script type="module" id="s1" src="scripts/search.js"></script>
+<script type="module" id="s2" src="scripts/cat-menu.js"></script>
