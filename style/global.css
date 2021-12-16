@@ -13,6 +13,7 @@
     --secondary-color:#808080;
     --background-color:#fff;
     --top-nav-bg:#98bfec;
+    --blue-color:blue;
     --font-size:0.95rem;
     --font-medium:1.2rem;
     --font-large: 3.2rem;
@@ -20,6 +21,7 @@
     --pri-font-weight:300;
     --bold-font-weight:bold;
     --large-padding:1rem;
+    --main-width:1292px;
 }
 .dark-theme{
     --primary-color:#fff;
@@ -27,6 +29,7 @@
     --secondary-color:#808080;
     --background-color:#1c1d1f;
     --top-nav-bg:#98bfec;
+    --blue-color:blue;
     --font-size:0.95rem;
     --font-medium:1.2rem;
     --font-large: 3.2rem;
@@ -34,6 +37,7 @@
     --pri-font-weight:300;
     --bold-font-weight:bold;
     --large-padding:1rem;
+    --main-width:1292px;
     background-color:#1C1D1F;
 }
 .dark-theme .icon{

@@ -1,0 +1,25 @@
+.name-div{
+    display: flex;
+    flex-direction: column;
+    width: var(--main-width);
+    margin: auto;
+}
+.name-div h1{
+   font-size: var(--font-large);
+}
+.name-div p,.name-div span{
+    font-family: var(--font-family-sf);
+    margin-top: 5px;
+
+}
+.name-div p{
+    font-weight: bold;
+    color:rgb(116, 116, 116);
+}
+.name-div span{
+    font-size: var(--font-size);
+    color:var(--primary-color);
+}
+.name-div p a{
+    color:var(--blue-color);
+}
