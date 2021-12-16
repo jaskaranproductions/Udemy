@@ -29,16 +29,15 @@
 <script type="module">
     import navbar from "./components/navbar.js"
     import navMobile from "./components/navbar-mobile.js"
-    // media queries
     let nav = navbar()
     function myFunction(x) {
-        if (x.matches) { // If media query matches
-            document.getElementById("media-style").href = "navbar-mobile.css"
+        if (x.matches) { 
+            document.getElementById("media-style").href = "style/navbar-mobile.css"
             document.querySelector("nav").innerHTML = navMobile()
             timer(document.querySelector(".timer"))
         } else {
             document.querySelector("nav").innerHTML = nav
-            document.getElementById("media-style").href = "navbar-desktop.css"
+            document.getElementById("media-style").href = "style/navbar-desktop.css"
             timer(document.querySelector(".timer"))
         }
     }
@@ -81,6 +80,5 @@
 ////////
 
 </script>
-<script src=""></script>
-<script type="module" id="s1" src="scripts/search.js"></script>
-<script type="module" id="s2" src="scripts/cat-menu.js"></script>
+<script type="module"  src="scripts/search.js"></script>
+<script type="module"  src="scripts/cat-menu.js"></script>
