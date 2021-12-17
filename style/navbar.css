@@ -147,7 +147,7 @@ section{
     border-top: none;
 }
 .autocomplete{
-    max-height:200px;
+    max-height:380px;
     overflow:hidden;
 }
 .suggestions{

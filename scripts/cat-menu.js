@@ -1446,6 +1446,7 @@ const categories = [
 //     }
 //   }
 // }
+import search from "./searchProd.js";
 let fCat = document.querySelector(".first-cat");
 let sCat = document.querySelector(".second-cat");
 let tCat = document.querySelector(".third-cat");
@@ -1454,7 +1455,6 @@ function mapCat() {
   sCat.innerHTML = "";
   tCat.innerHTML = "";
   categories.map((main) => {
-    // if (main.cat1) {
     let d1 = document.createElement("div");
     let first = document.createElement("h3");
     first.textContent = main.cat1;
@@ -1468,7 +1468,9 @@ function mapCat() {
       fCat.append(d1);
     }
     // }
-
+    first.addEventListener("click", () => {
+      search(main.cat1);
+    });
     first.addEventListener("mouseenter", () => {
       first.classList.add("blue");
       sCat.style.display = "block";
@@ -1483,7 +1485,9 @@ function mapCat() {
         next.src = "assets/next.png";
         d2.append(second, next);
         sCat.append(d2);
-
+        second.addEventListener("click", () => {
+          search(sec.cat1);
+        });
         second.addEventListener("mouseenter", () => {
           second.classList.add("blue");
           tCat.innerHTML = "";
@@ -1494,6 +1498,9 @@ function mapCat() {
             third.textContent = thi;
             d3.append(third);
             tCat.append(d3);
+            third.addEventListener("click", () => {
+              search(thi);
+            });
           });
         });
         second.addEventListener("mouseleave", () => {
