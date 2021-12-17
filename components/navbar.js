@@ -1,5 +1,5 @@
 const navbar = () => {
-return `
+  return `
 <div class="sale-nav">
     <div class="sale-contant">
         <div class="sale-info">
@@ -28,7 +28,7 @@ return `
     </div>
     <div class="search">
         <div> <img class="icon" src="assets/search.png" alt="">
-            <input id="search" type="text" placeholder="search">
+            <input id="search" type="search" placeholder="search">
         </div>
         <div class="search-res">
             <div class="autocomplete"></div>

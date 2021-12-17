@@ -11,7 +11,9 @@
         href="https://www.udemy.com/staticx/udemy/images/v8/favicon-16x16.png" />
     <meta name="title" content="Online Courses - Learn Anything, On Your Schedule | Udemy">
     <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/course-list.css">
 
     <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
 </head>
@@ -20,8 +22,84 @@
     <nav>
 
     </nav>
-    <section></section>
+    <div id="b2">
 
+        <div id="text">
+            <div id="text1">Learning that gets you</div>
+            <div id="text2">Skills for your present (and your future). Get started with us.</div>
+        </div>
+        <img src="https://img-c.udemycdn.com/notices/web_banner/slide_1_image_udlite/db24b94e-d190-4d5a-b1dd-958f702cc8f5.jpg"
+            alt="" />
+    </div>
+    </div>
+
+
+
+    <div id="b3">
+        <div id="b34">
+            Training 5 or more people?
+            <span id="b31">Get your team access to Udemy's top 6,000+ courses</span>
+        </div>
+        <div>
+            <button id="b32">
+                Get Udemy business
+            </button>
+        </div>
+        <div>
+            <button id="b33">
+                Dismiss
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="z1">What to learn next</div>
+    <div id="z2">Popular for advancing Full Stack Web Developers <span
+            style="color:#5624d0; font-size: .97rem; text-decoration: underline; margin-left: 1.2rem;">Edit
+            profession</span></div>
+
+
+
+
+
+
+
+
+
+    <div id="z3">
+        <div id="z4">New </div> <span style="margin-left: .7rem;">Inspired by your selections</span>
+    </div>
+
+
+
+
+    <!-- 1 container  -->
+
+    <div class="con1">
+        <div class="course-list">
+            <div>
+                <div class="slide">
+                </div>
+            </div>
+            <button class="next-slide" id="slide1">
+                <img src="assets/next.png" alt="" srcset="">
+            </button>
+            <button class="prev-slide" id="slideP1">
+                <img src="assets/next.png" alt="" srcset="">
+            </button>
+        </div>
+    </div>
+
+
+    <footer style=" margin-top:100px; position:relative; background-color: black; color:white !important;">
+
+    </footer>
 </body>
 
 </html>
@@ -29,9 +107,12 @@
 <script type="module">
     import navbar from "./components/navbar.js"
     import timer from "./scripts/timer.js"
+    import footer from "./components/footer.js"
+    import cousreList from "./components/courseList.js"
     document.querySelector("nav").innerHTML = navbar()
+    document.querySelector("footer").innerHTML = footer()
     //////////////////////////////////////////////timer
-       timer(document.querySelector(".timer"))
+    timer(document.querySelector(".timer"))
     document.querySelector(".remove-sale").addEventListener("click", () => {
         document.querySelector(".sale-nav").style.display = "none"
     })
@@ -55,10 +136,21 @@
         }
     }
     /////////////
-    
 
+    let d = JSON.parse(localStorage.getItem("pData"))
+    cousreList(d, document.querySelector(".slide"))
+    document.querySelector("#slide1").onclick = () => {
+        document.querySelector(".slide").style.marginLeft = "-1292px"
+        document.querySelector("#slideP1").style.display = "flex"
+        document.querySelector("#slide1").style.display = "none"
+    }
+    document.querySelector("#slideP1").onclick = () => {
+        document.querySelector(".slide").style.marginLeft = "0"
+        document.querySelector("#slideP1").style.display = "none"
+        document.querySelector("#slide1").style.display = "flex"
+    }
 ////////
 
 </script>
-<script type="module"  src="scripts/search.js"></script>
-<script type="module"  src="scripts/cat-menu.js"></script>
+<script type="module" src="scripts/search.js"></script>
+<script type="module" src="scripts/cat-menu.js"></script>

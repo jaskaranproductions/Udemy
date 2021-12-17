@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/global.css">
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/course-list.css">
 
     <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
 </head>
@@ -25,6 +26,18 @@
         <p class="course-title">JavaScript relates to <a> DevelopmentIT & Software</a></p>
         <span class="learners">12,197,710 learners</span>
     </div>
+    <div class="course-list">
+        <div>
+            <div class="slide">
+            </div>
+        </div>
+        <button class="next-slide" id="slide1">
+            <img src="assets/next.png" alt="" srcset="">
+        </button>
+        <button class="prev-slide" id="slideP1">
+            <img src="assets/next.png" alt="" srcset="">
+        </button>
+    </div>
 </body>
 
 </html>
@@ -32,6 +45,7 @@
 <script type="module">
     import navbar from "./components/navbar.js"
     import timer from "./scripts/timer.js"
+    import cousreList from "./components/courseList.js"
 
     document.querySelector("nav").innerHTML = navbar()
     timer(document.querySelector(".timer"))
@@ -53,6 +67,19 @@
 
         }
     }
+    let d = JSON.parse(localStorage.getItem("pData"))
+    cousreList(d, document.querySelector(".slide"))
+    document.querySelector("#slide1").onclick = () => {
+        document.querySelector(".slide").style.marginLeft = "-1292px"
+        document.querySelector("#slideP1").style.display = "flex"
+        document.querySelector("#slide1").style.display = "none"
+    }
+    document.querySelector("#slideP1").onclick = () => {
+        document.querySelector(".slide").style.marginLeft = "0"
+        document.querySelector("#slideP1").style.display = "none"
+        document.querySelector("#slide1").style.display = "flex"
+    }
+
 </script>
 
 <script type="module" src="scripts/search.js"></script>

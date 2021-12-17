@@ -9,7 +9,7 @@
 }
 :root{
     --primary-color:#1c1d1f;
-    --faded-color:#3d3c0a;
+    --faded-color:#414141;
     --secondary-color:#808080;
     --background-color:#fff;
     --top-nav-bg:#98bfec;
@@ -25,11 +25,11 @@
 }
 .dark-theme{
     --primary-color:#fff;
-    --faded-color:#3d3c0a;
+    --faded-color:#8b8b8b;
     --secondary-color:#808080;
     --background-color:#1c1d1f;
     --top-nav-bg:#98bfec;
-    --blue-color:blue;
+    --blue-color:rgb(91, 91, 255);
     --font-size:0.95rem;
     --font-medium:1.2rem;
     --font-large: 3.2rem;
@@ -42,4 +42,8 @@
 }
 .dark-theme .icon{
     filter:invert();
+}
+footer{
+    padding:20px 0px;
+    font-family: var(--font-family-sf);
 }

@@ -15,7 +15,7 @@
     width: 70%;
 }
 .sale-info *{
-    color:var(--faded-color);
+    color:rgb(34, 34, 34);
     font-size: var(--font-size);
     font-weight: var(--pri-font-weight);
 }
@@ -139,12 +139,12 @@ section{
     width: 100%;
 }
 .search-res{
-    
-    border: 1px solid red;
     position:absolute;
     top: 100%;
-    width: 90%;
-    border: 1px solid rgba(128, 128, 128, 0.322);
+    background-color:var(--background-color);
+    z-index: 999;
+    width: 95.5%;
+    border-top: none;
 }
 .autocomplete{
     max-height:200px;
@@ -163,6 +163,7 @@ section{
 }
 .cat-menu{
     display:none;
+    z-index: 999;
 }
 .cat-active{
   min-height:600px;
