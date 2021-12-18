@@ -204,3 +204,20 @@ section{
     border-left: none !important;
     display:none
 }
+.cart{
+    position:relative;
+}
+#cart-count{
+    position: absolute;
+    background-color:#A537F0;
+    color: white;
+    display:flex;
+    top: -30%;
+    right: -30%;
+    align-items: center;
+    justify-content:center;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    padding:4px;
+}

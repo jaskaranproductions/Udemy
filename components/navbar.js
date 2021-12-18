@@ -1,4 +1,5 @@
 const navbar = () => {
+  let cart = JSON.parse(localStorage.getItem("courseCart")) || [];
   return `
 <div class="sale-nav">
     <div class="sale-contant">
@@ -41,11 +42,13 @@ const navbar = () => {
         <a href="#">Teach on Udemy</a>
     </div>
     <div class="cart">
-        <a href="#"> <img class="icon" src="assets/shopping-cart.png" alt=""> </a>
+        <a href="cart.html"> <img class="icon" src="assets/shopping-cart.png" alt=""> </a>
+        <span id="cart-count">${cart.length || 0}</span>
     </div>
     <div class="sign-log">
         <a href="#"> <button> Log in </button></a>
         <a href="#"> <button> Sign up </button></a>
+        <div class="user user-none"></div>
     </div>
     <div class="dark-mode">
         <div class="mods">

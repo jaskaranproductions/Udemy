@@ -566,6 +566,7 @@ let search = [
 //   return element.trim().toLowerCase();
 // });
 // console.log(search);
+import searchP from "./searchProd.js";
 function autocomplete(inp, arr) {
   var currentFocus;
   inp.addEventListener("input", function (e) {
@@ -585,7 +586,7 @@ function autocomplete(inp, arr) {
     this.parentNode.appendChild(a);
     for (i = 0; i < arr.length; i++) {
       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-        b = document.createElement("DIV");
+        b = document.createElement("div");
         b.classList.add("suggestions");
         b.innerHTML = `<img class="icon" id="res-icon" width="10px" src="assets/search.png" alt=""><strong>${arr[
           i
@@ -595,6 +596,7 @@ function autocomplete(inp, arr) {
         b.addEventListener("click", function (e) {
           inp.value = this.getElementsByTagName("input")[0].value;
           closeAllLists();
+          searchP(inp.value);
         });
         document.querySelector(".autocomplete").append(b);
       }
@@ -641,3 +643,8 @@ function autocomplete(inp, arr) {
   });
 }
 autocomplete(document.getElementById("search"), search);
+document.getElementById("search").addEventListener("keyup", (e) => {
+  if (e.key == "Enter") {
+    searchP(document.getElementById("search").value);
+  }
+});

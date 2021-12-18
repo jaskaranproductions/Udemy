@@ -84,7 +84,12 @@ height:50px;
     border:none;
     margin-bottom: -10px;
     background:transparent;
+    cursor: pointer;
 }
+.filter-toggle{
+    cursor: pointer;
+}
+
 .sort select:focus{
     outline:none;
 }
@@ -116,39 +121,92 @@ height:50px;
  */
  .left-filters{
     height:900px;
-  
+     font-family: var(--font-family-sf);
     width: 29%;
     display: flex;
     flex-direction: column;
     padding:20px 40px;
   }
- .left-filters
- .stars{
-  width: 200px;
-  height:20px;
-  padding-left: -20px;
-  
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
- }
  .fil-title{
+     padding:10px 0px;
      display: flex;
      align-items: center;
-
      justify-content:space-between;
  }
- .fil-title img{
-    width:20px;
-    transform:rotate(270deg)
+ .fil-title h2{
+    font-size: 16px;
  }
+ .fil-title img{
+    width:10px;
+    margin-right: 10px;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+ }
+ .fil-data{
+     display: flex;
+     flex-direction: column;
+ }
+ .fil-data p {
+   margin: 8px 0px;
+   cursor: pointer;
+ }
+ .fil-title~.fil-data{
+     height:0;
+     overflow: hidden;
+     border-bottom: 1px solid var(--faded-color);
+
+ }
+.fil-active~.fil-data{
+    height:fit-content;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+.fil-active~.fil-data::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+/* Track */
+.fil-active~.fil-data::-webkit-scrollbar-track {
+  background:transparent;
+}
+
+/* Handle */
+.fil-active~.fil-data::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.fil-active~.fil-data::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+.fil-active img{
+    transform:rotate(180deg);
+}
+.filters-disabled{
+      width:0px;
+      overflow: hidden;
+      display: none;
+}
+.filters-disabled~.right-products{
+    width: 100%;
+}
+
+
+
  /* ////////////////// */
  .right-products >div{
      font-family: var(--font-family-sf);
  display: flex;
  align-items: center;
  margin: 10px 0px;
+ border-top: 1px solid rgba(126, 126, 126, 0.541);
+ padding-top: 10px;
+ justify-content: space-between;
+ position: relative;
  }
+ 
  .left-prod{
 
      display: flex;
@@ -204,4 +262,56 @@ height:50px;
  .price-sec span{
     text-decoration:line-through;
     font-weight:600;
+ }
+ .hover-div{
+     position:absolute;
+    border:1px solid rgba(126, 126, 126, 0.541);
+     top: -125%;
+     width: 380px;
+     height: 200px;
+     background-color:var(--background-color);
+     left: 50%;
+     padding:10px;
+     transform:translate(-50%,0%);
+     transition: display 0,5s ease;
+ }
+ .tick{
+     width: 10px;
+     margin-right: 10px;
+     margin-top: 10px;
+     opacity: 70%;
+ }
+ .hover-div h4{
+    font-size: 15px;
+    margin-left: 22px;
+ }
+ .cart-div{
+     display: flex;
+     justify-content:center;
+     width: 100%;
+ }
+ .cart-div button{
+     height:40px;
+     background-color: #A537F0;
+     color:white;
+     border:none;
+     width: 90%;
+     cursor: pointer;
+ }
+ .hover-div p{
+     margin: 10px 0;
+    font-size: 14px;
+    color:var(--secondary-color);
+ }
+ .hover-div::before{
+     content: '';
+     position:absolute;
+     width: 0; 
+     top: 100%;
+     left: 50%;
+     transform: translate(-50%,0);
+     height: 0; 
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
+     border-top: 10px solid var(--background-color);
  }

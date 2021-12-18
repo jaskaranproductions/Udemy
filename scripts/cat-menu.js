@@ -1469,6 +1469,7 @@ function mapCat() {
     }
     // }
     first.addEventListener("click", () => {
+      localStorage.setItem("catData", JSON.stringify(main.sub1));
       search(main.cat1);
     });
     first.addEventListener("mouseenter", () => {
@@ -1486,6 +1487,7 @@ function mapCat() {
         d2.append(second, next);
         sCat.append(d2);
         second.addEventListener("click", () => {
+          localStorage.setItem("catData", JSON.stringify(main.sub1));
           search(sec.cat1);
         });
         second.addEventListener("mouseenter", () => {
@@ -1499,6 +1501,7 @@ function mapCat() {
             d3.append(third);
             tCat.append(d3);
             third.addEventListener("click", () => {
+              localStorage.setItem("catData", JSON.stringify(main.sub1));
               search(thi);
             });
           });
