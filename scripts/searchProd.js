@@ -1,5 +1,6 @@
 const search = (q, f) => {
-  let api = "AIzaSyAIKpVgXIrhmWyThxs3ZIcf4Q9NjLY-0Jg";
+  // let api = "AIzaSyAIKpVgXIrhmWyThxs3ZIcf4Q9NjLY-0Jg";
+  let key = "AIzaSyBIbVkfoR0jTOtQVN8PjOgb4UW3oDr12Lg";
 
   const getData = async () => {
     let val = q + " course";
