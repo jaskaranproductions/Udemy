@@ -218,3 +218,9 @@ button{
 #remove_h61{
 	cursor: pointer;
 }
+#div_for_ap{
+	margin: 10px;
+}
+a[href="checkout.html"]{
+	color:white;
+}

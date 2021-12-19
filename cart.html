@@ -59,23 +59,38 @@
 
     ////////
     // change mode
+    if (JSON.parse(localStorage.getItem("theme")) == "dark") {
+        document.querySelector("body").classList.add("dark-theme")
+        document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+    } else {
+        document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+        document.querySelector("body").classList.remove("dark-theme")
+    }
     document.querySelector(".mods").addEventListener("click", () => {
         document.querySelector(".mods").classList.toggle("light-mode")
         changeTheme()
     })
     function changeTheme() {
-        let mode = document.querySelector(".mods")
-        if (mode.classList.contains("light-mode")) {
-            document.querySelector("body").classList.add("dark-theme")
-            document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
-        } else {
+        let mode = JSON.parse(localStorage.getItem("theme"))
+        if (mode == "dark") {
             document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
             document.querySelector("body").classList.remove("dark-theme")
+            localStorage.setItem("theme", JSON.stringify("light"))
+        } else {
+            document.querySelector("body").classList.add("dark-theme")
+            document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+
+            localStorage.setItem("theme", JSON.stringify("dark"))
 
         }
     }
     /////////////
     // navbar end
+    let login = JSON.parse(localStorage.getItem("log"))
+    if (login.log == true) {
+        document.querySelector(".sign-log").classList.add("loged")
+        document.querySelector(".user").textContent = login.user[0]
+    }
 </script>
 <script src="scripts/cart.js"></script>
 
