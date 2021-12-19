@@ -1,8 +1,6 @@
 const navbar = () => {
   let cart = JSON.parse(localStorage.getItem("courseCart")) || [];
-  
-  return `
-<div class="sale-nav">
+  return `<div class="sale-nav">
     <div class="sale-contant">
         <div class="sale-info">
             <h2> <span class="bold-info"> Sale ends today |</span> Expand your potential through learning.
@@ -31,6 +29,7 @@ const navbar = () => {
     <div class="search">
         <div> <img class="icon" src="assets/search.png" alt="">
             <input id="search" type="search" placeholder="search">
+
         </div>
         <div class="search-res">
             <div class="autocomplete"></div>
